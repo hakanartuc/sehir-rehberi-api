@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SehirRehberi.API.Data;
 using SehirRehberi.API.Dtos;
@@ -30,6 +31,7 @@ namespace SehirRehberi.API.Controllers
 
         [HttpPost]
         [Route("add")]
+        [AllowAnonymous]
         public ActionResult Add([FromBody]City city)
         {
             _appRepository.Add(city);

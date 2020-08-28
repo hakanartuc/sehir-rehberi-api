@@ -17,8 +17,8 @@ namespace SehirRehberi.API.Controllers
     [Produces("application/json")]
     public class AuthController : ControllerBase
     {
-        private IAuthRepository _authRepository;
-        private IConfiguration _configuration;
+        private readonly IAuthRepository _authRepository;
+        private readonly IConfiguration _configuration;
 
         public AuthController(IAuthRepository authRepository, IConfiguration configuration)
         {
